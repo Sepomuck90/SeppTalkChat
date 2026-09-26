@@ -3,6 +3,8 @@ workflows:
     name: Android Debug APK
     instance_type: mac_mini_m1
     scripts:
+      - name: Make gradlew executable
+        script: chmod +x ./gradlew
       - name: Build APK
         script: ./gradlew assembleDebug
     artifacts:

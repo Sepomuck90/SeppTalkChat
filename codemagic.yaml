@@ -2,6 +2,7 @@ workflows:
   android-workflow:
     name: Android Debug APK
     instance_type: mac_mini_m1
+    working_directory: app
     scripts:
       - name: Build APK with Gradle
         script: gradle assembleDebug
